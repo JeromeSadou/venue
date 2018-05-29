@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="jquery-ui.css">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script src="main.js"></script>
+    <style>
+      #seats {
+        width: 500px;
+      }
+      #venue-g {
+        width: 300px;
+        min-height: 150px;
+      }
+      .seat { 
+        display: none;
+      }
+      #slider {
+        width: 300px;
+      }
+      input {
+        width:25px;
+      }
+      .filter {
+        width: 500px;
+        display: grid;
+        grid-template-columns: 50px 320px 40px; 
+      }
+    </style>
+</head>
+
+<body>
+  <div class="filter">
+      <input type="text" id="minValue" value="100" />
+      <div id="slider"></div>
+      <input type="text" id="maxValue" value="500" />
+    </div>
+  <object id="seats" type="image/svg+xml" data="seats.svg">
+      Your browser does not support SVG
+  </object>
+  <div class="controls">
+    <button id="zoom-in">Zoom in</button>
+    <button id="zoom-out">Zoom out</button>
+    <button id="reset">Reset</button>
+  </div>
+  <br>
+  
+</body>
